@@ -1,8 +1,8 @@
 import { Bot } from "grammy";
-import { loadEnvFile } from "node:process";
 import { getQuote } from "./utils/quotes";
+import { configDotenv } from "dotenv";
 
-loadEnvFile("./.env");
+configDotenv();
 
 const bot = new Bot(process.env.TOKEN as string);
 
