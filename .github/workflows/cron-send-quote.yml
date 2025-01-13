@@ -1,0 +1,18 @@
+name: Send Quote Cron Job
+
+on:
+  schedule:
+    # Run every 1 hour and 30 minutes
+    - cron: "*/90 * * * *"
+
+  workflow_dispatch: # Optional: Allows you to trigger manually
+
+jobs:
+  send-quote:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Make a GET request to the /send-quote endpoint
+      - name: Send Quote Request
+        run: |
+          curl -X GET https://vergine-the-wise-one.vercel.app/send-quote
