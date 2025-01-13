@@ -15,4 +15,4 @@ jobs:
       # Make a GET request to the /send-quote endpoint
       - name: Send Quote Request
         run: |
-          curl -X GET https://vergine-the-wise-one.vercel.app/send-quote
+          curl -X GET https://vergine-the-wise-one.onrender.com/send-quote
